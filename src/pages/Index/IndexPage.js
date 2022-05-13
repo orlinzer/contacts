@@ -8,12 +8,21 @@ export const IndexPage = () => {
     <Layout>
       <ContactList users={[
         {
-          name: 'or',
+          id: '1',
+          name: 'Or Linzer',
           src: '',
           phone: '0505050505',
           email: 'or@mail.com',
           tags: [],
-        }
+        },
+        {
+          id: '2',
+          name: 'Hilal Sharkawi',
+          src: '',
+          phone: '0525252525',
+          email: 'hilal@mail.com',
+          tags: [],
+        },
       ]} />
     </Layout>
   );
