@@ -1,0 +1,148 @@
+/*****************************************
+ * General
+ *****************************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&family=Raleway:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  --link-color: rgb(75, 166, 241);
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+}
+
+h1 {
+  font-family: 'Paytone One', sans-serif;
+  font-size: 3rem;
+  margin: 0.5em 0;
+  color: teal;
+}
+
+h2,
+h3 {
+  font-family: 'Paytone One', sans-serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin: 1.5em 0;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+h2 {
+  font-size: 1.8rem;
+  /* text-decoration: underline; */
+}
+h3 {
+  font-size: 1.4rem;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+a:focus,
+a:hover {
+  opacity: 0.7;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+}
+nav li {
+  list-style: none;
+  padding: 1em 0;
+  margin: 0;
+}
+
+nav li a {
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: 0.5s;
+  padding: 0.2em 0;
+
+  align-self: flex-start;
+}
+nav li a:hover {
+  opacity: 0.5;
+}
+
+/* nav li + li {
+  margin-left: 2rem;
+} */
+
+ol,
+ul {
+  padding-left: 5px;
+}
+
+main {
+  flex: 1;
+  width: min(80%, 1000px);
+  margin: 0 auto 5rem;
+}
+
+p {
+  margin: 1em 0;
+}
+
+li {
+  margin: 0.5em;
+}
+
+b {
+  color: rgb(6, 187, 187);
+}
+
+.ext-nav {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+}
+
+.int-nav {
+  display: flex;
+  flex-direction: column;
+  margin-right: 3rem;
+}
+
+.int-nav a {
+  border: none;
+  font-size: 1em;
+}
+
+.int-nav > a {
+  border-bottom: 1px solid currentColor;
+  font-size: 1.2em;
+}
+.int-nav ul {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 0;
+}
+
+.int-nav ul li {
+  padding: 0.1em 0;
+}
+
+video {
+  max-width: 600px;
+}

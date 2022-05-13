@@ -1,0 +1,12 @@
+
+.ContactList {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  justify-content: flex-start;
+  align-items: stretch;
+
+  width: 100%;
+  flex-grow: 1;
+}
