@@ -14,4 +14,4 @@
 * install the dependencies by running: ```npm i``` from the root directory of the project
 * run the development build by running: ```npm run start``` from the root directory of the project
 
-### enjoy
+### Enjoy
