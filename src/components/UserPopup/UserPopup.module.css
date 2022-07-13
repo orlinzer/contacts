@@ -1,3 +1,4 @@
+/* The section that show the details of the user */
 .UserDetails {
   display: grid;
   grid-template-columns: auto auto;

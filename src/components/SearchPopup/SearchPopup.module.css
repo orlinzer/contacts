@@ -1,3 +1,4 @@
+/* The search input */
 .Input {
   height: 2rem;
   max-height: 2rem;
@@ -5,6 +6,7 @@
   border-radius: 1rem;
 }
 
+/* The search form */
 .SearchForm {
   position: sticky;
   top: 0;

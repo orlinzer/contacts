@@ -1,11 +1,25 @@
-import uuid from "react-uuid"
+import uuid from 'react-uuid';
 
-import ContactListItem from "../ContactListItem/ContactListItem"
+import ContactListItem from '../ContactListItem/ContactListItem';
 
-import styles from "./ContactList.module.css"
+import styles from './ContactList.module.css';
 
+/**
+ * A list of given contacts
+ */
 export const ContactList = (props) => {
-  const { users, setUsers, selectUser, setUserSetter, usersToPresent } = props
+  const {
+    // The users of the app
+    users,
+    // The users setter
+    setUsers,
+    // The function to set the user we want to show
+    selectUser,
+    // The function to set the user we want to set
+    setUserSetter,
+    // The users to show
+    usersToPresent,
+  } = props;
 
   return (
     <div className={styles.ContactList}>
@@ -27,7 +41,7 @@ export const ContactList = (props) => {
               }
               editUser={() => setUserSetter(user)}
               selectUser={() => {
-                selectUser(user)
+                selectUser(user);
               }}
             />
           ))}
@@ -36,7 +50,7 @@ export const ContactList = (props) => {
         <h2 className={styles.ContactListEmpty}>There are no users</h2>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default ContactList
+export default ContactList;

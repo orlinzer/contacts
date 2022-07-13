@@ -1,10 +1,27 @@
-import { Fragment, useRef } from "react"
-import styles from "./Field.module.css"
+import { Fragment, useRef } from 'react';
+import styles from './Field.module.css';
 
-export function Field(props) {
-  const { label, type, value, setValue, focus, required } = props
+/**
+ * A field in a form
+ */
+export const Field = (props) => {
+  const {
+    // The label of the field
+    label,
+    // The type of the field
+    type,
+    // The value of the field
+    value,
+    // The value setter of the field
+    setValue,
+    // If we want to focus on this field
+    focus,
+    // If this field is required
+    required,
+  } = props;
 
-  const fieldRef = useRef(null)
+  // A reference of the field
+  const fieldRef = useRef(null);
 
   return (
     <Fragment>
@@ -21,7 +38,7 @@ export function Field(props) {
         required={required}
       />
     </Fragment>
-  )
-}
+  );
+};
 
-export default Field
+export default Field;

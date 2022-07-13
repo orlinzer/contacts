@@ -1,3 +1,4 @@
+/* The title of the header */
 .HeaderTitle {
   display: flex;
 
@@ -11,10 +12,12 @@
   cursor: pointer;
 }
 
+/* The logo */
 .Logo {
   width: 2.5rem;
 }
 
+/* The name of the app */
 .Name {
   margin: 0;
   font-size: 1.5em;

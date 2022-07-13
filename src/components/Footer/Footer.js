@@ -1,13 +1,16 @@
-import styles from "./Footer.module.css"
+import styles from './Footer.module.css';
 
-export function Footer() {
+/**
+ * The footer of the app
+ */
+export const Footer = () => {
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.Footer}>
       <p className="footer">
         &copy; {new Date().getFullYear()} Or Linzer and Hilal Sharkawi
       </p>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

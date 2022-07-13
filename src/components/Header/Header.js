@@ -1,10 +1,26 @@
-import HeaderTitle from "../HeaderTitle/HeaderTitle"
-import HeaderOperations from "../HeaderOperations/HeaderOperations"
+import HeaderTitle from '../HeaderTitle/HeaderTitle';
+import HeaderOperations from '../HeaderOperations/HeaderOperations';
 
-import styles from "./Header.module.css"
+import styles from './Header.module.css';
 
+/**
+ * The header of the app
+ */
 export const Header = (props) => {
-  const { users, setUsers, setUserPopup, setUsersSearch, setUserSetter, setErrorMessage } = props
+  const {
+    // The users of the app
+    users,
+    // The users setter of the app
+    setUsers,
+    // The function to set the UserPopup
+    setUserPopup,
+    // The function to set the name of the user we want to search
+    setUsersSearch,
+    // The function to set the user we want to set
+    setUserSetter,
+    // The function to set the error message
+    setErrorMessage,
+  } = props;
 
   return (
     <header className={styles.Header}>
@@ -22,7 +38,7 @@ export const Header = (props) => {
         setUsers={setUsers}
       />
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

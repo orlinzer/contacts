@@ -1,4 +1,5 @@
-.footer {
+/* The footer of the app */
+.Footer {
   padding: 0 1em;
 
   display: flex;

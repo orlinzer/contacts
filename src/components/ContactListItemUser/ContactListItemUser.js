@@ -1,16 +1,23 @@
-import Avatar from "../Avatar/Avatar"
+import Avatar from '../Avatar/Avatar';
 
-import styles from "./ContactListItemUser.module.css"
+import styles from './ContactListItemUser.module.css';
 
+/**
+ * The user section in ContactListItem
+ */
 export const ContactListItemUser = (props) => {
-  const { selectUser, user } = props
+  const {
+    // The select function
+    selectUser,
+    // The user to show
+    user,
+  } = props;
 
   return (
     <div
       className={styles.ContactListItemUser}
       onClick={() => selectUser()}
-      title={"More Details"}
-    >
+      title={'More Details'}>
       <Avatar
         name={`${user?.name?.first} ${user?.name?.last}`}
         src={user?.picture?.thumbnail}
@@ -19,7 +26,7 @@ export const ContactListItemUser = (props) => {
         {user?.name?.title} {user?.name?.first} {user?.name?.last}
       </p>
     </div>
-  )
-}
+  );
+};
 
-export default ContactListItemUser
+export default ContactListItemUser;

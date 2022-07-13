@@ -1,13 +1,16 @@
+/* The fieldset */
 .Fieldset {
   display: grid;
   grid-template-columns: auto auto;
   column-gap: 0.5rem;
 }
 
+/* The note about the contact */
 .Note {
   width: 100%;
 }
 
+/* The submit button */
 .Submit {
   width: calc(100% - 2rem);
   margin: 1rem;
@@ -15,6 +18,7 @@
   cursor: pointer;
 }
 
+/* The error message */
 .ErrorMessage {
   color: #f77;
   grid-column: 1 / 3;

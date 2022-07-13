@@ -1,36 +1,45 @@
-import Card from "../Card/Card"
-import ContactList from "../ContactList/ContactList"
+import Card from '../Card/Card';
+import ContactList from '../ContactList/ContactList';
 
-import styles from "./SearchPopup.module.css"
+import styles from './SearchPopup.module.css';
 
+/**
+ * The search popup
+ */
 export const SearchPopup = (props) => {
   const {
+    // The users of the app
     users,
+    // The function to set the users of the app
     setUsers,
+    // The name of the user we want to search
     usersSearch,
+    // The function to set the name of the user we want to search
     setUsersSearch,
+    // The user to show on the UserPopup
     selectUser,
+    // The user we want to set
     userSetter,
+    // The function to set the user we want to set
     setUserSetter,
-  } = props
+  } = props;
 
+  // Not rendering if the usersSearch is null
   if (usersSearch === null) {
-    return null
+    return null;
   }
 
   return (
     <Card
       color="white"
       close={() => {
-        setUsersSearch(null)
-      }}
-    >
+        setUsersSearch(null);
+      }}>
       <form
         className={styles.SearchForm}
         action=""
         method="get"
-        onSubmit={(e) => e.preventDefault()}
-      >
+        onSubmit={(e) => e.preventDefault()}>
         <input
           className={styles.Input}
           type="search"
@@ -53,7 +62,7 @@ export const SearchPopup = (props) => {
         setUserSetter={setUserSetter}
       />
     </Card>
-  )
-}
+  );
+};
 
-export default SearchPopup
+export default SearchPopup;

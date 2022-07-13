@@ -1,3 +1,4 @@
+/* An avatar of an user */
 .Avatar {
   display: flex;
   flex-direction: row;
@@ -19,6 +20,7 @@
   background-color: #777;
 }
 
+/* A large avatar */
 .Large {
   width: 7.5rem;
   height: 7.5rem;

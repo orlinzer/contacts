@@ -1,3 +1,4 @@
+/* A popup card */
 .Card {
   position: fixed;
   z-index: 100;
@@ -19,6 +20,7 @@
   background-color: white;
 }
 
+/* A close button */
 .CloseButton {
   position: absolute;
   top: 10px;
@@ -27,6 +29,7 @@
   cursor: pointer;
 }
 
+/* The content of the card */
 .Content {
   width: 100%;
   height: 100%;
