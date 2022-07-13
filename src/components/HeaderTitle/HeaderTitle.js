@@ -1,15 +1,16 @@
 import styles from "./HeaderTitle.module.css"
 
 export const HeaderTitle = (props) => {
-  const { setUserPopup, setUsersSearch, setUserSetter } = props
+  const { setUserPopup, setUsersSearch, setUserSetter, setErrorMessage } = props
 
   return (
     <div
       className={styles.HeaderTitle}
       onClick={() => {
-        setUserPopup(null)
-        setUsersSearch(null)
-        setUserSetter(null)
+        setUserPopup(null);
+        setUsersSearch(null);
+        setUserSetter(null);
+        setErrorMessage('');
       }}
       title={"Contacts"}
     >

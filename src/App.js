@@ -58,6 +58,7 @@ export const App = () => {
         setUserPopup={setUserPopup}
         setUsersSearch={setUsersSearch}
         setUserSetter={setUserSetter}
+        setErrorMessage={setErrorMessage}
       />
       <Main>
         <ContactList

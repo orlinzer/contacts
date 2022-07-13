@@ -4,12 +4,6 @@
   column-gap: 0.5rem;
 }
 
-@media only screen and (max-width: 500px) {
-  .Fieldset {
-    grid-template-columns: auto;
-  }
-}
-
 .Note {
   width: 100%;
 }
@@ -24,4 +18,14 @@
 .ErrorMessage {
   color: #f77;
   grid-column: 1 / 3;
+}
+
+@media only screen and (max-width: 500px) {
+  .Fieldset {
+    grid-template-columns: auto;
+  }
+
+  .ErrorMessage {
+    grid-column: 1 / 2;
+  }
 }

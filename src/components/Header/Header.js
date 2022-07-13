@@ -4,7 +4,7 @@ import HeaderOperations from "../HeaderOperations/HeaderOperations"
 import styles from "./Header.module.css"
 
 export const Header = (props) => {
-  const { users, setUsers, setUserPopup, setUsersSearch, setUserSetter } = props
+  const { users, setUsers, setUserPopup, setUsersSearch, setUserSetter, setErrorMessage } = props
 
   return (
     <header className={styles.Header}>
@@ -12,6 +12,7 @@ export const Header = (props) => {
         setUserPopup={setUserPopup}
         setUsersSearch={setUsersSearch}
         setUserSetter={setUserSetter}
+        setErrorMessage={setErrorMessage}
       />
 
       <HeaderOperations
