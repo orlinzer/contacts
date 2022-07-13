@@ -1,0 +1,27 @@
+.Fieldset {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 0.5rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .Fieldset {
+    grid-template-columns: auto;
+  }
+}
+
+.Note {
+  width: 100%;
+}
+
+.Submit {
+  width: calc(100% - 2rem);
+  margin: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.ErrorMessage {
+  color: #f77;
+  grid-column: 1 / 3;
+}

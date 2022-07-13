@@ -1,6 +1,10 @@
 {
   "cSpell.words": [
+    "browserslist",
     "Hilal",
-    "Sharkawi"
-  ]
+    "Sharkawi",
+    "Usergroup"
+  ],
+  "editor.formatOnSave": true,
+  "files.autoSave": "afterDelay"
 }

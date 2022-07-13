@@ -1,19 +1,13 @@
-import React from 'react';
+import styles from "./Footer.module.css"
 
-import Button from '../Button/Button';
-
-import style from './Footer.module.css';
-
-export function Footer () {
+export function Footer() {
   return (
-    <footer
-      className={style.footer}
-    >
-      <p className='footer'>&copy; { new Date().getFullYear() } Or Linzer</p>
-
-      <Button>Button on Footer</Button>
+    <footer className={styles.footer}>
+      <p className="footer">
+        &copy; {new Date().getFullYear()} Or Linzer and Hilal Sharkawi
+      </p>
     </footer>
-  );
+  )
 }
 
-export default Footer;
+export default Footer

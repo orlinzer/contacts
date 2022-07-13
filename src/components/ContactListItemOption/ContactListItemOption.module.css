@@ -1,0 +1,8 @@
+.ContactListItemOption {
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+.ContactListItemOption > * {
+  font-size: 1.5rem;
+}

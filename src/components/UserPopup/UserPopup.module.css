@@ -1,0 +1,20 @@
+.UserDetails {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 0.5rem;
+}
+
+@media only screen and (max-width: 400px) {
+  .UserDetails {
+    grid-template-columns: auto;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+.Field {
+  font-size: large;
+  text-decoration: underline;
+}

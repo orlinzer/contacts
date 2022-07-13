@@ -1,0 +1,7 @@
+.ContactListItemOptions {
+  display: flex;
+
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-end;
+}

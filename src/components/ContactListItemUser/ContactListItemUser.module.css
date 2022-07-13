@@ -1,0 +1,16 @@
+.ContactListItemUser {
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  justify-content: flex-start;
+  align-items: center;
+
+  min-height: 3em;
+
+  cursor: pointer;
+
+  gap: 15px;
+}

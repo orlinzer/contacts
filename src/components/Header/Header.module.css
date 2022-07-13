@@ -1,5 +1,15 @@
+.Header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
 
-.header {
+  width: 100%;
+  min-width: min-content;
+
+  height: 3rem;
+  min-height: 3rem;
+  max-height: 3rem;
+
   padding: 0 1em;
 
   display: flex;

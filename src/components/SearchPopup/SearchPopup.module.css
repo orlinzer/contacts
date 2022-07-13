@@ -1,0 +1,11 @@
+.Input {
+  height: 2rem;
+  max-height: 2rem;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.SearchForm {
+  position: sticky;
+  top: 0;
+}

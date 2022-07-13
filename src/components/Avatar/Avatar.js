@@ -1,89 +1,37 @@
-import React, { useState } from 'react';
+import styles from "./Avatar.module.css"
 
-// import { IoPersonCircle } from 'react-icons/io';
-import { IoIosAddCircle, Person } from 'react-icons/io';
-import { MdPerson, MdPersonPinCircle, MdPeople, MdOutlinePeople } from 'react-icons/md';
-import { BsPersonCircle } from 'react-icons/bs';
+export const Avatar = (props) => {
+  const { name, src, color, size } = props
 
-// import style from './Avatar';
+  const title = name ?? "Avatar"
+  const imagePath = src ?? "/logo.svg"
+  const initials = name
+    ? name
+        .split(" ")
+        .map((word) => word[0])
+        .join("")
+        .toUpperCase()
+    : undefined
 
-/**
- * @typedef AvatarProperties
- * @type {object}
- * @property {string} name - avatar name.
- * @property {string} src - avatar image source.
- * @property {string} color - avatar color.
- * @property {number} borderWidth - avatar border's width.
- * @property {string} borderColor - avatar border's color.
- * @property {ReactNode} children - avatar name.
- */
-
-/**
- *
- * @param {AvatarProperties} props
- * @returns Avatar
- */
-export const Avatar = ({name, src, color, borderWidth, borderColor, children}) => {
-
-  const initials = name ? name.split(' ').map(word => word[0]).join('').toUpperCase() : undefined;
-  // const initials = name ? name.split(' ').map(word => word[0]).join('').toLocaleLowerCase() : undefined;
-  // const initials = name ? name.split(' ').length : undefined;
-  // const initials = name;
-
-  const style = {
-    // width: '4em',
-    // height: '4em',
-    borderRadius: '50%',
-    fontSize: '2em',
-    backgroundColor: color,
-    cursor: 'pointer',
-  };
-
-  return (
-    <React.Fragment>
-      {
-        src ? (
-          <img
-            // className={style.avatar}
-            style={style}
-            src={src}
-            alt={name}
-            title={name}
-          />
-        ) : (
-          initials ? (
-            <p
-              // className={style.avatar}
-              style={{
-                ...style,
-                margin: 0,
-                padding: '10px',
-                width: '2em',
-                height: '2em',
-                fontSize: '2em',
-                fontWeight: 'bold',
-                textAlign: 'center',
-                borderWidth: borderWidth,
-                borderColor: borderColor,
-              }}
-              title={name}
-            >
-              {initials}
-            </p>
-          ) : (
-            <span
-              title={name}
-            >
-              <BsPersonCircle
-                // className={style.avatar}
-                style={style}
-              />
-            </span>
-          )
-        )
-      }
-    </React.Fragment>
-  );
+  return !src && initials ? (
+    <p
+      title={title}
+      className={`${styles.Avatar} ${size === "large" && styles.Large}`}
+      style={{
+        backgroundColor: color,
+      }}
+    >
+      {initials}
+    </p>
+  ) : (
+    <img
+      src={imagePath}
+      alt={`name ${Avatar}`}
+      width={40}
+      title={title}
+      className={`${styles.Avatar} ${size === "large" && styles.Large}`}
+    />
+  )
 }
 
-export default Avatar;
+export default Avatar

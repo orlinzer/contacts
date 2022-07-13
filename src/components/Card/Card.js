@@ -1,23 +1,16 @@
-import React from 'react';
+import { MdClose } from "react-icons/md"
 
-import style from './Card.module.css';
+import styles from "./Card.module.css"
 
-export function Card (props) {
-  const {color, onClick, children} = props;
+export function Card(props) {
+  const { children, close } = props
 
   return (
-    <div
-      className={style.card}
-      style={{
-        ...props.style,
-        backgroundColor: color,
-      }}
-
-      onClick={onClick}
-    >
-      {children}
+    <div className={styles.Card}>
+      <MdClose className={styles.CloseButton} onClick={() => close()} />
+      <div className={styles.Content}>{children}</div>
     </div>
-  );
+  )
 }
 
-export default Card;
+export default Card
