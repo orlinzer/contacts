@@ -28,10 +28,10 @@ export const sortUsers = (userA, userB) => {
   if (!userA.name.last) return userB;
   if (userA.name.last !== userB.name.last)
     return userA.name.last.localeCompare(userB.name.last);
-  if (!userB.name.firs) return userA;
-  if (!userA.name.firs) return userB;
-  if (userA.name.firs !== userB.name.firs)
-    return userA.name.firs.localeCompare(userB.name.firs);
+  if (!userB.name.first) return userA;
+  if (!userA.name.first) return userB;
+  if (userA.name.first !== userB.name.first)
+    return userA.name.first.localeCompare(userB.name.first);
   if (!userB.name.title) return userA;
   if (!userA.name.title) return userB;
   return userA.name.title.localeCompare(userB.name.title);
@@ -73,7 +73,7 @@ export const App = () => {
       users.some(
         (user) =>
           editedUser?.name?.title === user?.name?.title &&
-          editedUser?.name?.firs === user?.name?.firs &&
+          editedUser?.name?.first === user?.name?.first &&
           editedUser?.name?.last === user?.name?.last &&
           editedUser?.login?.uuid !== user?.login?.uuid
       )
