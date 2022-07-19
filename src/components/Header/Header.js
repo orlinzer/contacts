@@ -20,6 +20,8 @@ export const Header = (props) => {
     setUserSetter,
     // The function to set the error message
     setErrorMessage,
+    // // The function that add an random user
+    // addRandomUser,
   } = props;
 
   return (
@@ -36,6 +38,7 @@ export const Header = (props) => {
         setUsersSearch={setUsersSearch}
         setUserSetter={setUserSetter}
         setUsers={setUsers}
+        // addRandomUser={addRandomUser}
       />
     </header>
   );

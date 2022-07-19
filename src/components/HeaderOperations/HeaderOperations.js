@@ -1,4 +1,5 @@
 import AddUserButton from '../AddUserButton/AddUserButton';
+import RandomUserButton from '../RandomUserButton/RandomUserButton';
 import RemoveAllUsersButton from '../RemoveAllUsersButton/RemoveAllUsersButton';
 import SearchButton from '../SearchButton/SearchButton';
 
@@ -15,6 +16,8 @@ export const HeaderOperations = (props) => {
     setUserSetter,
     // The function to set the UserPopup
     setUsers,
+    // // The function that add an random user
+    // addRandomUser,
   } = props;
 
   return (
@@ -24,6 +27,8 @@ export const HeaderOperations = (props) => {
       <AddUserButton setUserSetter={setUserSetter} />
 
       <RemoveAllUsersButton setUsers={setUsers} />
+
+      {/* <RandomUserButton addRandomUser={addRandomUser} /> */}
     </div>
   );
 };

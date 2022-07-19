@@ -52,6 +52,17 @@ export const App = () => {
   // The error message
   const [errorMessage, setErrorMessage] = useState('');
 
+  // // Load random user data
+  // const getRandomUser = () => {
+  //   fetch(`https://randomuser.me/api/?results=1`)
+  //     .then((res) => res.json())
+  //     .then((res) => {
+  //       setUsers((users) => {
+  //         return [...res.results, ...users].sort(sortUsers);
+  //       });
+  //     });
+  // }
+
   // Load users data
   const getUsers = () => {
     fetch(`https://randomuser.me/api/?results=${initNumberOfUsers}`)
@@ -59,7 +70,7 @@ export const App = () => {
       .then((res) => {
         setUsers((users) => {
           if (users.length > 0) {
-            return users;
+            return users.sort(sortUsers);
           }
           return [...res.results, ...users].sort(sortUsers);
         });
@@ -110,6 +121,7 @@ export const App = () => {
         setUsersSearch={setUsersSearch}
         setUserSetter={setUserSetter}
         setErrorMessage={setErrorMessage}
+        // addRandomUser={getRandomUser}
       />
       <Main>
         <ContactList
